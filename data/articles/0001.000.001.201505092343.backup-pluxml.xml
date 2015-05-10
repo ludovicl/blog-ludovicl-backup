@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document>
+	<title><![CDATA[Backup PluXml]]></title>
+	<allow_com>0</allow_com>
+	<template><![CDATA[article.php]]></template>
+	<chapo><![CDATA[]]></chapo>
+	<content><![CDATA[<p>Mon blog tourne sous <a href="http://www.pluxml.org">PluXml</a>, j&#8217;aime bien ce système de gestion de contenu, car tout est fichier.
+Je peux donc réaliser facilement un backup de mon blog chaque jour.</p>
+
+<p>Pour se faire j&#8217;utilise git :</p>
+
+<ul>
+<li><p>J&#8217;ai créé un repository sur <a href="https://github.com/ludovicl/blog-ludovicl-backup">github</a> </p></li>
+<li><p>Ecris un script shell </p>
+
+<pre class="sh_sh">
+#/bin/sh
+NOW=$(date +&quot;%m-%d-%Y&quot;) 
+git add -A 
+git commit -m &quot;Blog backup from $NOW&quot;
+git push
+</pre>
+</li>
+<li><p>Automatisé le backup avec un crontab</p>
+
+<pre><code>59      23      *       *       *       sh /var/www/vhosts/ludovicl.fr/httpdocs/backup.sh</code>
+</pre></li>
+</ul>
+
+<p>Ainsi chaque jour à 23h59 j&#8217;ai un backup complet de mon blog. En cas de soucis avec mon hébergeur, un simple copier/coller du dossier me permet de remettre le blog sur pieds. </p>]]></content>
+	<tags><![CDATA[PluXml, Git]]></tags>
+	<meta_description><![CDATA[]]></meta_description>
+	<meta_keywords><![CDATA[]]></meta_keywords>
+	<title_htmltag><![CDATA[]]></title_htmltag>
+</document>
