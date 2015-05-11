@@ -14,7 +14,7 @@ Je peux donc réaliser facilement un backup de mon blog chaque jour.</p>
 <li><p>Ecris un script shell </p>
 
 <pre class="sh_sh">
-#/bin/sh
+#!/bin/sh
 cd /var/www/vhosts/ludovicl.fr/httpdocs
 NOW=$(date +&quot;%m-%d-%Y&quot;) 
 
@@ -25,11 +25,11 @@ git push
 </li>
 <li><p>Automatisé le backup avec un crontab</p>
 
-<pre><code>59      23      *       *       *       sh /var/www/vhosts/ludovicl.fr/httpdocs/backup.sh</code>
+<pre><code>30      23      *       *       *       sh /var/www/vhosts/ludovicl.fr/httpdocs/backup.sh</code>
 </pre></li>
 </ul>
 
-<p>Ainsi chaque jour à 23h59 j&#8217;ai un backup complet de mon blog. En cas de soucis avec mon hébergeur, un simple copier/coller du dossier me permet de remettre le blog sur pieds. </p>]]></content>
+<p>Ainsi chaque jour à 23h30 j&#8217;ai un backup complet de mon blog. En cas de soucis avec mon hébergeur, un simple copier/coller du dossier me permet de remettre le blog sur pieds. </p>]]></content>
 	<tags><![CDATA[PluXml, Git]]></tags>
 	<meta_description><![CDATA[]]></meta_description>
 	<meta_keywords><![CDATA[]]></meta_keywords>
