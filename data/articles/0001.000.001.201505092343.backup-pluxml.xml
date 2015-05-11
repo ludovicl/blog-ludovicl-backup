@@ -15,7 +15,9 @@ Je peux donc réaliser facilement un backup de mon blog chaque jour.</p>
 
 <pre class="sh_sh">
 #/bin/sh
+cd /var/www/vhosts/ludovicl.fr/httpdocs
 NOW=$(date +&quot;%m-%d-%Y&quot;) 
+
 git add -A 
 git commit -m &quot;Blog backup from $NOW&quot;
 git push
