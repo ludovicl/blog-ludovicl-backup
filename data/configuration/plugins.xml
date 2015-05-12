@@ -3,4 +3,6 @@
 	<plugin name="plxMyPluginDownloader"></plugin>
 	<plugin name="plxMyAllArchive"></plugin>
 	<plugin name="shjs"></plugin>
+	<plugin name="ckeditor"></plugin>
+	<plugin name="plxeditor"></plugin>
 </document>
